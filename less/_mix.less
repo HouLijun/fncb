@@ -1,0 +1,138 @@
+//混合
+.rect(@width:300px ,@height:100px){
+  width:@width;
+  height:@height;
+}
+.cube(@size:100px){
+  width:@size;
+  height:@size;
+}
+.circle(@size:100px){
+  .cube(@size);
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+.rectRadius(@width:300px ,@height:100px,@radius:10px){
+  width:@width;
+  height:@height;
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+.cubeRadius(@size:100px,@radius:10px){
+  width:@size;
+  height:@size;
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+.lt(){
+  position: absolute;
+  left:0;
+  top:0;
+}
+.lb(){
+  position: absolute;
+  left:0;
+  bottom:0;
+}
+.rt(){
+  position: absolute;
+  right:0;
+  top:0;
+}
+.rb(){
+  position: absolute;
+  right:0;
+  bottom:0;
+}
+.lr(){
+  position: absolute;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.tb(){
+  position: absolute;
+  top:0;
+  bottom:0;
+  margin:auto;
+}
+.center(){
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto;
+}
+.cover(){
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.clearFloat(@content:"",@width:0,@height:0){
+  &:after{
+    content:@content;
+    display: block;
+    width:@width;
+    height:@height;
+    clear: both;
+  }
+}
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+.z-index(@index:1){
+  -webkit-z-index:@index;
+  -moz-z-index:@index;
+  -ms-z-index:@index;
+  -o-z-index:@index;
+  z-index:@index;
+}
+
+//animation
+.animation-name(@name){
+  -webkit-animation-name: @name;
+  -moz-animation-name: @name;
+  -o-animation-name: @name;
+  animation-name: @name;
+}
+.animation-duration(@duration){
+  -webkit-animation-duration: @duration;
+  -moz-animation-duration: @duration;
+  -o-animation-duration: @duration;
+  animation-duration: @duration;
+}
+.animation-delay(@time){
+  -webkit-animation-delay: @time;
+  -moz-animation-delay: @time;
+  -o-animation-delay: @time;
+  animation-delay: @time;
+}
+.animation-iteration-count(@count){
+  -webkit-animation-iteration-count: @count;
+  -moz-animation-iteration-count: @count;
+  -o-animation-iteration-count: @count;
+  animation-iteration-count: @count;
+}
+.animation-direction(@direction:alternate){
+  -webkit-animation-direction: @direction;
+  -moz-animation-direction: @direction;
+  -o-animation-direction: @direction;
+  animation-direction: @direction;
+}
+
+//transform
+.transform-origin(@x:center,@y:center,@z:0){
+  -webkit-transform-origin:@arguments;
+  -moz-transform-origin:@arguments;
+  -ms-transform-origin:@arguments;
+  -o-transform-origin:@arguments;
+  transform-origin:@arguments;
+}

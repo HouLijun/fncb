@@ -1,0 +1,998 @@
+@import "_mix";
+.section{
+  background:url("../images/first_bg.jpg") center/cover no-repeat;
+}
+.animated{
+  .animation-duration(0.5s);
+}
+/* S 第一屏 */
+.first{
+  .pedestal{
+    .rect(532px,170px);
+    background: url("../images/first_pedestal.png") center/contain no-repeat;
+    .lr;
+    bottom:300px;
+    -webkit-z-index:1;
+    -moz-z-index:1;
+    -ms-z-index:1;
+    -o-z-index:1;
+    z-index:1;
+  }
+  .light{
+    .rect(640px,733px);
+    background: url("../images/first_light.png") center/contain no-repeat;
+    .animation-duration(.1s);
+    .animation-delay(.5s);
+    .animation-iteration-count(5);
+    .animation-direction();
+  }
+  .cow{
+    .rect(365px,270px);
+    background: url("../images/first_cow.png") center/contain no-repeat;
+    .lr;
+    bottom: 395px;
+    .animation-duration(.8s);
+    .animation-delay(1s);
+    -webkit-z-index:2;
+    -moz-z-index:2;
+    -ms-z-index:2;
+    -o-z-index:2;
+    z-index:2;
+  }
+  .stars{
+    .rect(640px,1024px);
+    background: url("../images/first_stars.png") center/contain no-repeat;
+    .lt;
+    .animation-delay(1.8s);
+    .animation-direction();
+    .animation-duration(.3s);
+  }
+  .title{
+    .rect(317px,75px);
+    background: url("../images/first_title.png") center/contain no-repeat;
+    .lr;
+    top:144px;
+    .animation-delay(2s);
+    .animation-duration(.8s);
+  }
+  .description{
+    .rect(352px,74px);
+    background: url("../images/first_description.png") center/contain no-repeat;
+    .lr;
+    top:272px;
+    opacity:0;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+    .animation-delay(2.5s);
+    .animation-direction();
+    .animation-iteration-count(3);
+    .animation-duration(1s);
+    &.show{
+      opacity:1;
+    }
+  }
+  .code{
+    .rect(182px,277px);
+    position: absolute;
+    bottom:25px;
+  }
+  .code-1{
+    background: url("../images/first_code1.png") center/contain no-repeat;
+    left:26px;
+    .animation-delay(3.5s);
+    -webkit-z-index:100;
+    -moz-z-index:100;
+    -ms-z-index:100;
+    -o-z-index:100;
+    z-index:100;
+  }
+  .code-2{
+    background: url("../images/first_code2.png") center/contain no-repeat;
+    left:26px;
+    .lr();
+    .animation-delay(3.8s);
+    -webkit-z-index:99;
+    -moz-z-index:99;
+    -ms-z-index:99;
+    -o-z-index:99;
+    z-index:99;
+  }
+  .code-3{
+    background: url("../images/first_code3.png") center/contain no-repeat;
+    right:26px;
+    .animation-delay(4s);
+    -webkit-z-index:98;
+    -moz-z-index:98;
+    -ms-z-index:98;
+    -o-z-index:98;
+    z-index:98;
+  }
+}
+/* E 第一屏 */
+
+/* S 第二屏 */
+.second{
+  .envelope{
+    .rect(640px,540px);
+    background: url("../images/second_envelope.png") left/contain no-repeat;
+    position: absolute;
+    left:0;
+    bottom:50px;
+    opacity:0;
+  }
+  .title{
+    .rect(417px,143px);
+    background: url("../images/second_title.png") center/contain no-repeat;
+    .animation-delay(.5s);
+    position: absolute;
+    right:85px;
+    bottom:130px;
+    opacity:0;
+  }
+  .letter{
+    height:50px;
+    position: absolute;
+    bottom:305px;
+    left:113px;
+    right:76px;
+    background:url("../images/second_letter.png") top/cover no-repeat;
+    opacity:0;
+    .animation-delay(1s);
+    .z-index(1);
+    -webkit-transition: height linear 0.5s;
+    -moz-transition: height linear 0.5s;
+    -ms-transition: height linear 0.5s;
+    -o-transition: height linear 0.5s;
+    transition: height linear 0.5s;
+    &.show{
+      height:600px;
+    }
+    .hand{
+      .rect(167px,174px);
+      background:url("../images/second_hand.png") top/contain no-repeat;
+      position: absolute;
+      top:-80px;
+      right:-73px;
+      .z-index(2);
+    }
+    .stars,.star{
+      position: absolute;
+      opacity:0;
+      .z-index(3);
+      .animation-delay(3s);
+      .animation-direction();
+      .animation-iteration-count(3);
+
+    }
+    .stars{
+      .rect(122px,146px);
+      background:url("../images/second_stars.png") center/contain no-repeat;
+      left:-60px;
+      top:-20px;
+    }
+    .star{
+      .cube(28px);
+      background:url("../images/single_star.png") center/contain no-repeat;
+      right:16px;
+      bottom:40px;
+    }
+  }
+}
+/* E 第二屏 */
+
+/* S 第三屏 */
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform:rotate(0) ;
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform:rotate(360deg) ;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes  rotating {
+  from {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform:rotate(0) ;
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform:rotate(360deg) ;
+    transform: rotate(360deg);
+  }
+}
+@keyframes blowUp{
+  from{
+    -webkit-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -o-transform:scale(0,0) ;
+    transform:scale(0,0) ;
+  }
+  to{
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform:scale(1,1) ;
+    transform:scale(1,1) ;
+  }
+}
+@-webkit-keyframes blowUp{
+  from{
+    -webkit-transform: scale(0,0);
+    -moz-transform: scale(0,0);
+    -ms-transform: scale(0,0);
+    -o-transform:scale(0,0) ;
+    transform:scale(0,0) ;
+  }
+  to{
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform:scale(1,1) ;
+    transform:scale(1,1) ;
+  }
+}
+.third{
+  .title{
+    .rect(396px,125px);
+    background:url("../images/third_title.png") center/contain no-repeat;
+    .lr;
+    top:40px;
+    opacity:0;
+  }
+  .cloud{
+    .rect(640px,149px);
+    background:url("../images/third_cloud.png") center/contain no-repeat;
+    position: absolute;
+    bottom:0;
+    opacity:0;
+  }
+  .cow{
+    .rect(154px,202px);
+    background:url("../images/third_cow.png") center/contain no-repeat;
+    .lr;
+    top:195px;
+    opacity:0;
+    .animation-delay(1s);
+  }
+  .dial{
+    .cube(640px);
+    .lr;
+    top:300px;
+    .center{
+      .cube(128px);
+      background:url("../images/third_center.png") center/contain no-repeat;
+      .center;
+      z-index:999;
+      .animation-delay(1.5s);
+      &.rotating{
+        -webkit-animation:rotating linear 3s infinite 1s;
+        -o-animation:rotating linear 3s infinite  1s;
+        animation:rotating linear 3s infinite 1s;
+      }
+    }
+    .small{
+      .center;
+      width:272px !important;
+      height:272px !important;
+      background:transparent;
+      z-index:998;
+      .part{
+        .cube(132px);
+        -webkit-transform:scale(0,0) ;
+        -moz-transform:scale(0,0) ;
+        -ms-transform:scale(0,0) ;
+        -o-transform:scale(0,0) ;
+        transform:scale(0,0) ;
+        &.show{
+          -webkit-animation:blowUp .8s both  ;
+          -o-animation:blowUp .8s both ;
+          animation:blowUp .8s both ;
+        }
+      }
+      .part-lt{
+        background:url("../images/third_small_lt.png") center/contain no-repeat;
+        .lt();
+        &.show{
+          .transform-origin(right,bottom);
+          .animation-delay(0.4s);
+        }
+      }
+      .part-rt{
+        background:url("../images/third_small_rt.png") center/contain no-repeat;
+        .rt();
+        &.show{
+          .transform-origin(left,bottom);
+          .animation-delay(0.8s);
+        }
+      }
+      .part-rb{
+        background:url("../images/third_small_rb.png") center/contain no-repeat;
+        .rb();
+        &.show{
+          .transform-origin(left,top);
+          .animation-delay(1.1s);
+        }
+      }
+      .part-lb{
+        background:url("../images/third_small_lb.png") center/contain no-repeat;
+        .lb();
+        &.show{
+          .transform-origin(right,top);
+          .animation-delay(1.4s);
+        }
+      }
+    }
+    .large{
+      .center;
+      width:536px !important;
+      height:536px !important;
+      background:transparent;
+      z-index:997;
+      .part{
+        -webkit-transform:scale(0,0) ;
+        -moz-transform:scale(0,0) ;
+        -ms-transform:scale(0,0) ;
+        -o-transform:scale(0,0) ;
+        transform:scale(0,0) ;
+        &.show{
+          -webkit-animation:blowUp .8s both  ;
+          -o-animation:blowUp .8s both ;
+          animation:blowUp .8s both ;
+        }
+      }
+      .part-top{
+        .rect(355px,260px);
+        background:url("../images/third_large_top.png") center/contain no-repeat;
+        .lr();
+        top:0;
+        &.show{
+          .transform-origin(center,bottom);
+          .animation-delay(0.4s);
+        }
+      }
+      .part-right{
+        .rect(260px,355px);
+        background:url("../images/third_large_right.png") center/contain no-repeat;
+        .tb();
+        right:0;
+        &.show{
+          .transform-origin(left,center);
+          .animation-delay(0.8s);
+        }
+      }
+      .part-bottom{
+        .rect(355px,260px);
+        background:url("../images/third_large_bottom.png") center/contain no-repeat;
+        .lr();
+        bottom:0;
+        &.show{
+          .transform-origin(center,top);
+          .animation-delay(1.1s);
+        }
+      }
+      .part-left{
+        .rect(260px,355px);
+        background:url("../images/third_large_left.png") center/contain no-repeat;
+        .tb();
+        left:0;
+        &.show{
+          .transform-origin(right,center);
+          .animation-delay(1.4s);
+        }
+      }
+    }
+  }
+  .star{
+    background:url("../images/single_star.png") center/contain no-repeat;
+    position: absolute;
+    opacity:0;
+  }
+  .star-1{
+    .cube(39px);
+    top:204px;
+    left:130px;
+    .animation-direction();
+    .animation-duration(0.5s);
+    .animation-delay(0.3s);
+  }
+  .star-2{
+    .cube(72px);
+    top:245px;
+    left:190px;
+    .animation-direction();
+    .animation-duration(0.5s);
+    .animation-delay(0.7s)
+  }
+  .star-3{
+    .cube(26px);
+    top:360px;
+    left:95px;
+    .animation-direction();
+    .animation-duration(0.5s);
+    .animation-delay(0.1s)
+  }
+  .star-4{
+    .cube(45px);
+    top:805px;
+    left:545px;
+    .animation-direction();
+    .animation-duration(0.5s);
+    .animation-delay(0.2s)
+  }
+}
+/* E 第三屏 */
+
+/* S 第四屏 */
+.forth{
+  .title{
+    .rect(410px,128px);
+    background:url("../images/forth_title.png") center/contain no-repeat;
+    .lr;
+    top:57px;
+    opacity:0;
+    .z-index(100);
+  }
+  .cloud{
+    .rect(540px,668px);
+    background:url("../images/forth_cloud.png") center/contain no-repeat;
+    .lr;
+    top:265px;
+    opacity:0;
+    .animation-delay(0.5s);
+    .animation-duration(0.8s);
+    .floor{
+      position: absolute;
+      .animation-duration(1s);
+      opacity:0;
+    }
+    .floor-1{
+      .rect(261px,59px);
+      background:url("../images/forth_floor1.png") center/contain no-repeat;
+      .animation-delay(1.3s);
+      left:36px;
+      bottom:0;
+    }
+    .floor-2{
+      .rect(271px,112px);
+      background:url("../images/forth_floor2.png") center/contain no-repeat;
+      .animation-delay(1.8s);
+      right:45px;
+      bottom:122px;
+    }
+    .floor-3{
+      .rect(266px,63px);
+      background:url("../images/forth_floor3.png") center/contain no-repeat;
+      .animation-delay(2.3s);
+      top:329px;
+      left:0;
+    }
+    .floor-4{
+      .rect(267px,63px);
+      background:url("../images/forth_floor4.png") center/contain no-repeat;
+      .animation-delay(2.8s);
+      right:15px;
+      top:143px;
+    }
+    .floor-5{
+      .rect(210px,75px);
+      background:url("../images/forth_floor5.png") center/contain no-repeat;
+      .animation-delay(3.3s);
+      left:22px;
+      top:23px;
+    }
+  }
+  .stars{
+    .rect(640px,1024px);
+    background:url("../images/forth_stars.png") center/contain no-repeat;
+    opacity:0;
+    .animation-delay(3.8s);
+    .animation-direction();
+    .animation-duration(.3s);
+    .z-index(-1);
+  }
+}
+/* E 第四屏 */
+
+/* S 第五屏 */
+.fifth{
+  background:url("../images/fifth_bg.png") center/cover no-repeat;
+  .title{
+    .rect(515px,216px);
+    background:url("../images/fifth_title.png") center/contain no-repeat;
+    .lr;
+    .z-index(100);
+  }
+  .panel{
+    .rect(474px,367px);
+    background:url("../images/fifth_panel.png") center/contain no-repeat;
+    .lr;
+    .avatar{
+      .cube(106px);
+      .lr();
+      top:65px;
+    }
+    .step{
+      .rect(308px,86px);
+      position: absolute;
+      top:205px;
+      left:100px;
+      .flag{
+        .rect(18px,26px);
+        position: absolute;
+        left:-22px;
+        top:-18px;
+        .animation-duration(.8s);
+      }
+      .number{
+        .cube(50px);
+        position: absolute;
+      }
+      .keyword{
+        .rect(72px,17px);
+        position: absolute;
+      }
+      .step-1{
+        .number{
+          background:url("../images/fifth_step_1.png") center/contain no-repeat;
+          left:21px;
+          top:-23px;
+        }
+        .keyword{
+          left:12px;
+          top:32px;
+        }
+      }
+      .step-2{
+        .number{
+          background:url("../images/fifth_step_2.png") center/contain no-repeat;
+          left:113px;
+          top:-23px;
+        }
+        .keyword{
+          left:104px;
+          top:32px;
+        }
+      }
+      .step-3{
+        .number{
+          background:url("../images/fifth_step_3.png") center/contain no-repeat;
+          left:209px;
+          top:-23px;
+        }
+        .keyword{
+          left:199px;
+          top:32px;
+        }
+      }
+      .step-4{
+        .number{
+          background:url("../images/fifth_step_4.png") center/contain no-repeat;
+          bottom:-22px;
+          left:163px;
+        }
+        .keyword{
+          left:153px;
+          bottom:-42px;
+        }
+      }
+      .step-5{
+        .number{
+          background:url("../images/fifth_step_5.png") center/contain no-repeat;
+          bottom:-22px;
+          left:66px;
+        }
+        .keyword{
+          left:38px;
+          bottom:-42px;
+        }
+      }
+    }
+  }
+  .generalize{
+    top:133px;
+    .animation-delay(.8s);
+    .avatar{
+      background:url("../images/fifth_generalize_cow.png") center/contain no-repeat;
+      .animation-delay(1.2s);
+    }
+    .step{
+      background:url("../images/fifth_generalize_u.png") center/contain no-repeat;
+      .animation-delay(1.6s);
+      .flag{
+        background:url("../images/fifth_generalize_flag.png") center/contain no-repeat;
+        .animation-delay(2.0s);
+      }
+      .step-1 {
+        .number{
+          .animation-delay(2.4s);
+        }
+        .keyword{
+          .animation-delay(2.6s);
+          background:url("../images/fifth_generalize1.png") center/contain no-repeat;
+        }
+      }
+      .step-2 {
+        .number{
+          .animation-delay(2.8s);
+        }
+        .keyword{
+          .animation-delay(3s);
+          background:url("../images/fifth_generalize2.png") center/contain no-repeat;
+        }
+      }
+      .step-3 {
+        .number{
+          .animation-delay(3.2s);
+        }
+        .keyword{
+          .animation-delay(3.4s);
+          background:url("../images/fifth_generalize3.png") center/contain no-repeat;
+        }
+      }
+      .step-4 {
+        .number{
+          .animation-delay(3.6s);
+        }
+        .keyword{
+          .animation-delay(3.8s);
+          background:url("../images/fifth_generalize4.png") center/contain no-repeat;
+        }
+      }
+      .step-5 {
+        .number{
+          .animation-delay(4s);
+        }
+        .keyword{
+          .animation-delay(4.2s);
+          background:url("../images/fifth_generalize5.png") center/contain no-repeat;
+        }
+      }
+    }
+  }
+  .media{
+    top:525px;
+    .animation-delay(5s);
+    .avatar{
+      background:url("../images/fifth_media_cow.png") center/contain no-repeat;
+      .animation-delay(5.4s);
+    }
+    .step{
+      background:url("../images/fifth_media_u.png") center/contain no-repeat;
+      .animation-delay(5.8s);
+      .flag{
+        background:url("../images/fifth_media_flag.png") center/contain no-repeat;
+        .animation-delay(6.2s);
+      }
+      .step-1 {
+        .number{
+          .animation-delay(6.6s);
+        }
+        .keyword{
+          background:url("../images/fifth_media1.png") center/contain no-repeat;
+          .animation-delay(6.8s);
+        }
+      }
+      .step-2 {
+        .number{
+          .animation-delay(7s);
+        }
+        .keyword{
+          .animation-delay(7.2s);
+          background:url("../images/fifth_media2.png") center/contain no-repeat;
+        }
+      }
+      .step-3 {
+        .number{
+          .animation-delay(7.4s);
+        }
+        .keyword{
+          .animation-delay(7.8s);
+          background:url("../images/fifth_media3.png") center/contain no-repeat;
+        }
+      }
+      .step-4 {
+        .number{
+          .animation-delay(8s);
+        }
+        .keyword{
+          .animation-delay(8.2s);
+          background:url("../images/fifth_media4.png") center/contain no-repeat;
+        }
+      }
+      .step-5 {
+        .number{
+          .animation-delay(8.4s);
+        }
+        .keyword{
+          .animation-delay(8.8s);
+          background:url("../images/fifth_media5.png") center/contain no-repeat;
+        }
+      }
+    }
+  }
+}
+/* E 第五屏 */
+
+/* S 第六屏 */
+.sixth{
+  .title{
+    .rect(640px,337px);
+    background:url("../images/sixth_title.png") center/cover no-repeat;
+  }
+  .btn{
+    display: block;
+    .rect(209px,78px);
+    .lr;
+    .animation-duration(1s);
+    .animation-direction();
+  }
+  .generalize{
+    .rect(168px,472px);
+    position: absolute;
+    left:77px;
+    top:387px;
+    background:url("../images/sixth_generalize.png") center/cover no-repeat;
+    .animation-delay(.6s);
+    .btn{
+      .animation-delay(.5s);
+      background:url("../images/sixth_generalize_btn.png") center/cover no-repeat;
+      bottom:-133px;
+    }
+  }
+  .media{
+    .rect(207px,501px);
+    position: absolute;
+    right:66px;
+    top:387px;
+    background:url("../images/sixth_media.png") center/cover no-repeat;
+    .animation-delay(1s);
+    .btn{
+      .animation-delay(1s);
+      background:url("../images/sixth_media_btn.png") center/cover no-repeat;
+      bottom:-104px;
+    }
+  }
+}
+/* E 第六屏 */
+
+/* S 成为广告主 */
+.seventh,.eighth{
+  .cover();
+  .z-index(999);
+  display: none;
+  .title{
+    .rect(386px, 118px);
+    .lr;
+    top:62px;
+    .animation-delay(.8s);
+    .animation-direction();
+    .animation-iteration-count(3);
+  }
+  .form{
+    width:433px;
+    .lr;
+    .label{
+      display: block;
+      .rect(100%,71px);
+      margin-bottom:16px;
+      position: relative;
+      &.selected:after{
+        content: '';
+        .rect(46px,71px);
+        background: url("../images/seventh_arrow.png") right/contain no-repeat;
+        .rt;
+        .z-index(999);
+      }
+    }
+    .label:nth-of-type(1){
+      .animation-delay(1s);
+    }
+    .label:nth-of-type(2){
+      .animation-delay(1.2s);
+    }
+    .label:nth-of-type(3){
+      .animation-delay(1.4s);
+    }
+    .label:nth-of-type(4){
+      .animation-delay(1.6s);
+    }
+    .label:nth-of-type(5){
+      .animation-delay(1.8s);
+    }
+    .label:nth-of-type(6){
+      .animation-delay(2s);
+    }
+    .label:nth-of-type(7){
+      .animation-delay(2.2s);
+    }
+    .label:nth-of-type(8){
+      .animation-delay(2.4s);
+    }
+    .label:nth-of-type(9){
+      .animation-delay(2.6s);
+    }
+    .info{
+      .rect(100%,100%);
+      padding:0 22px;
+      font-size:24px;
+      color:#a9a9a9;
+      border:0;
+      outline: none;
+      -webkit-border-radius:10px;
+      -moz-border-radius:10px;
+      border-radius:10px;
+      margin-bottom:16px;
+    }
+    input::-webkit-input-placeholder{
+      color:#a9a9a9;
+    }
+    input::-moz-input-placeholder{
+      color:#a9a9a9;
+    }
+    input:-moz-input-placeholder{
+      color:#a9a9a9;
+    }
+    input:-ms-input-placeholder{
+      color:#a9a9a9;
+    }
+    select.info{
+      padding-right:50px;
+    }
+    .info.phone{
+      width:263px;
+    }
+    .btn{
+      .rectRadius(100%,71px,10px);
+      text-align: center;
+      font-size:24px;
+      color:#fff;
+      &.sendCode{
+        width:147px;
+        float: right;
+      }
+    }
+  }
+}
+
+.seventh{
+  .title {
+    background: url("../images/seventh_title.png") center/contain no-repeat;
+  }
+  .form{
+    top:210px;
+  }
+  .btn{
+    background-color: #45aee7;
+  }
+}
+/* E 成为广告主 */
+
+
+/* S 成为媒体主 */
+.eighth {
+  .title {
+    background: url("../images/eighth_title.png") center/contain no-repeat;
+  }
+  .form{
+    top:263px;
+  }
+  .btn{
+    background-color: #fa4b52;
+  }
+}
+/* E 成为媒体主 */
+
+/* S 欢迎加入 */
+@keyframes plane {
+  form {
+    -webkit-transform:translate3d(0,0,0) ;
+    -moz-transform:translate3d(0,0,0) ;
+    -ms-transform:translate3d(0,0,0) ;
+    -o-transform:translate3d(0,0,0) ;
+    transform:translate3d(0,0,0) ;
+  }
+  to {
+    -webkit-transform:translate3d(10px,-10px,0) ;
+    -moz-transform:translate3d(10px,-10px,0) ;
+    -ms-transform:translate3d(10px,-10px,0) ;
+    -o-transform:translate3d(10px,-10px,0) ;
+    transform:translate3d(10px,-10px,0) ;
+  }
+}
+@-webkit-keyframes plane {
+  form {
+    -webkit-transform:translate3d(0,0,0) ;
+    -moz-transform:translate3d(0,0,0) ;
+    -ms-transform:translate3d(0,0,0) ;
+    -o-transform:translate3d(0,0,0) ;
+    transform:translate3d(0,0,0) ;
+  }
+  to {
+    -webkit-transform:translate3d(10px,-10px,0) ;
+    -moz-transform:translate3d(10px,-10px,0) ;
+    -ms-transform:translate3d(10px,-10px,0) ;
+    -o-transform:translate3d(10px,-10px,0) ;
+    transform:translate3d(10px,-10px,0) ;
+  }
+}
+.section.welcome{
+  background: rgba(0,0,0,.9);
+  .z-index(1000);
+  display: none;
+  opacity:0;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity  .5s;
+  -ms-transition: opacity  .5s;
+  -o-transition: opacity  .5s;
+  transition: opacity  .5s;
+  .cover;
+  &.show{
+    opacity:1;
+  }
+  .panel{
+    .rect(461px,496px);
+    .lr();
+    .animation-delay(.6s);
+    top:300px;
+    .cow{
+      .rect(100%,100%);
+      background: url("../images/welcome.png") center/contain no-repeat;
+      .z-index(1002);
+      .animation-delay(1s);
+    }
+    .light{
+      .rect(640px,280px);
+      background: url("../images/welcome_light.png") center/contain no-repeat;
+      .z-index(1001);
+      position: absolute;
+      left:-106px;
+      top:-40px;
+      .animation-delay(1.5s);
+      .animation-direction();
+      .animation-duration(.3s);
+    }
+    .btn{
+      .rect(335px,81px);
+      background: url("../images/welcome_btn.png") center/contain no-repeat;
+      .z-index(1003);
+      .lr();
+      bottom:20px;
+      .animation-delay(2s);
+      .animation-direction();
+      .animation-duration(1s);
+      .animation-iteration-count(3);
+    }
+    .plane{
+      .rect(139px,231px);
+      background: url("../images/welcome_plane.png") center/contain no-repeat;
+      position: absolute;
+      top:-230px;
+      right:-10px;
+      opacity:0;
+      &.show{
+        opacity:1;
+        -webkit-animation:plane .5s linear 2.3s alternate infinite;
+        -o-animation:plane .5s linear 2.3s alternate infinite;
+        animation:plane .5s linear 2.3s alternate infinite;
+      }
+    }
+  }
+}
+/* E 欢迎加入 */
